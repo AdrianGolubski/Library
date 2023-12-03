@@ -193,7 +193,6 @@ class LibraryControl {
             printer.printLine(e.getMessage());
         }
         printer.printLine("Koniec programu, papa!");
-        // zamykamy strumień wejścia
         dataReader.close();
     }
 
@@ -205,8 +204,8 @@ class LibraryControl {
         PRINT_MAGAZINES(4, "Wyświetlenie dostępnych magazynów/gazet"),
         DELETE_BOOK(5, "Usuń książkę"),
         DELETE_MAGAZINE(6, "Usuń magazyn"),
-        ADD_USER(7, "Dodaj czytelnika"), //dodano
-        PRINT_USERS(8, "Wyświetl czytelników"), //dodano
+        ADD_USER(7, "Dodaj czytelnika"),
+        PRINT_USERS(8, "Wyświetl czytelników"),
         FIND_PUBLICATION_BY_TITLE(9, "Wyszukaj publikacje po tytule");
 
         private int value;

@@ -1,5 +1,5 @@
 /*
-    Klasa służąca do interakcji z użytkownikiem
+    user interaction class
  */
 
 package library.io;

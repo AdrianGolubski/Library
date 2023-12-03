@@ -1,5 +1,5 @@
 /*
-    Jej głównym zadaniem będzie przechowywanie informacji o książkach.
+    The main task of the class will be to store information about books.
  */
 
 package library.model;
@@ -14,7 +14,6 @@ public class Library implements Serializable {
     private Map<String, Publication> publications = new HashMap<>();
     private Map<String, LibraryUser> users = new HashMap<>();
 
-    //zmieniony typ zwracany
     public Map<String, Publication> getPublications() {
         return publications;
     }
@@ -35,12 +34,10 @@ public class Library implements Serializable {
         return list;
     }
 
-    //dodany getter
     public Map<String, LibraryUser> getUsers() {
         return users;
     }
 
-    //dodana metoda i rzucany nowy typ wyjątku
     public void addUser(LibraryUser user) {
         if(users.containsKey(user.getPesel()))
             throw new UserAlreadyExistsException(
@@ -49,7 +46,6 @@ public class Library implements Serializable {
         users.put(user.getPesel(), user);
     }
 
-    //zmieniona logika
     public void addPublication(Publication publication) {
         if(publications.containsKey(publication.getTitle()))
             throw new PublicationAlreadyExistsException(
@@ -58,7 +54,6 @@ public class Library implements Serializable {
         publications.put(publication.getTitle(), publication);
     }
 
-    //zmieniona logika
     public boolean removePublication(Publication publication) {
         if(publications.containsValue(publication)) {
             publications.remove(publication.getTitle());
