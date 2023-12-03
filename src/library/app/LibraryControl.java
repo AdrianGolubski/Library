@@ -58,10 +58,10 @@ class LibraryControl {
                 case DELETE_MAGAZINE:
                     deleteMagazine();
                     break;
-                case ADD_USER: //dodano
+                case ADD_USER:
                     addUser();
                     break;
-                case PRINT_USERS: //dodano
+                case PRINT_USERS:
                     printUsers();
                     break;
                 case FIND_PUBLICATION_BY_TITLE:
